@@ -7,6 +7,7 @@ The healthcare analysis project focuses on analyzing and deriving insights from 
 The healthcare analysis project is a comprehensive endeavor aimed at analyzing and deriving insights from healthcare-related data. Leveraging a dataset spanning from the fourth quarter of 2016 to 2020.
 The project focuses on various aspects such as hospital facilities, inpatient and outpatient details, revenue generation, and bed occupancy.
 By collecting and cleaning the data, the project aims to uncover trends, patterns, and relationships within the healthcare sector. Visualizations and data-driven analyses will be utilized to present the findings, enabling a deeper understanding of hospital performance, patient flow, and resource utilization. Ultimately, the project seeks to contribute valuable insights for informed decision-making and potential improvements in healthcare management.
+
 To use and explore this project:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Dataset
@@ -26,5 +27,11 @@ SQL Quarry file :https://github.com/sabihaKerur/HealthCare_Analysis/upload/main
 __________________________________________________________________________________________________________________________________________________________________
 
 ## Dashboard
+https://public.tableau.com/app/profile/sabiha.kerur/viz/HealthCareTableau_/Dashboard1
+
 ## Screenshot
+![Tableau_Dashboard_Screenshot](https://github.com/sabihaKerur/Healthcare_Analysis_Tableau/assets/104004284/796c3e5b-db62-4929-868b-ad985a6c5649)
+
+
+
 
