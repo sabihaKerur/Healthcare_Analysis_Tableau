@@ -1,0 +1,94 @@
+                               Healthcare_Analysis
+1.KPI
+Total Discharges.
+# Year_wise Discharge
+select 
+year
+,sum(dis_tot) as Total_Discharge 
+from hospital_quarterly_report
+group by year 
+order by Total_Discharge desc;
+
+# Quarter_wise DischargeE
+select 
+Quarter
+,sum(dis_tot) as Total_Discharge 
+from hospital_quarterly_report
+group by Quarter 
+order by Total_Discharge desc;
+
+2.KPI
+# 2. Patient days
+
+select
+year
+,sum(DAY_MCAR) as Medicare_Traditional
+,sum(DAY_MCAL) as Medi_ca_Traditional
+,sum(DAY_CNTY) as County_Indigent_Programs_Traditional
+,sum(DAY_THRD) as Other_Third_Parties_Traditional
+,sum(DAY_INDGNT) as Other_Indigent
+from hospital_quarterly_report
+group by year
+order by year;
+
+3.KPI
+3. Net Pateint Revenue
+select
+year
+,sum(NET_TOT) as Total_Revenue
+,round(avg(NET_TOT),2) as Average_Revenue
+from hospital_quarterly_report
+group by year 
+order by Total_Revenue;
+
+4.KPI
+# 4. Patient Stays
+
+select 
+year,
+round(sum(day_tot)/sum(dis_tot),2) as Average_length_stay
+from hospital_quarterly_report
+group by year
+order by year;
+
+5.KPI
+# 5. State Wise No of hospital /Revenue 
+
+select 
+county_name
+,count(type_hosp) as Count_Hospital_type
+from hospital_quarterly_report
+group by county_name
+order by county_name;
+
+6.KPI
+# 6. Type Of hospital Revenue
+
+select 
+type_hosp as Hospital_type
+,sum(net_tot) as Total_revenue
+from hospital_quarterly_report
+group by Hospital_type
+order by Hospital_type ;
+
+# 7. MTD/QTD/YTD Revenue
+
+select 
+year
+,concat('$',sum(net_tot)) as YTD
+from hospital_quarterly_report
+group by year;
+
+8.KPI
+# 8. Revenue Trend  
+
+select 
+year,
+concat('$',sum(GROP_TOT)) as Outpatient_revenue,
+concat('$',sum(GRIP_TOT)) as Inpatient_Revenue
+from hospital_quarterly_report
+group by year;
+
+
+
+
